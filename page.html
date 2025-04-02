@@ -1,0 +1,164 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <p>Question</p><span>01/02</span>
+        </div>
+        <div>
+            <p>Below are three options on how to respond to</p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>You will...</p>
+        </div>
+
+        <div>
+            <p>Below are the options i need to select</p>
+            <div>
+                <img src="img1.png"/>
+            </div>
+            <div>
+                <img src="img2.png"/>
+            </div>
+            <div>
+                <img src="img3.png"/>
+            </div>
+            <div>
+                <img src="img4.png"/>
+            </div>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </div>
+    
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90vw;
+            height: 90vh;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .question {
+            background-color: #c7e8b7;
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 1.5rem;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 5vw;
+            margin-top: 5vh;
+        }
+        .option {
+            text-align: center;
+        }
+        .option img {
+            width: 15vw;
+            height: 15vw;
+            max-width: 150px;
+            max-height: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .submit-btn {
+            margin-top: 5vh;
+            padding: 12px 25px;
+            border: none;
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            cursor: not-allowed;
+            font-size: 1rem;
+        }
+        .submit-btn.active {
+            background-color: blue;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95vw;
+                height: 95vh;
+                padding: 10px;
+            }
+            .options {
+                flex-direction: column;
+                align-items: center;
+            }
+            .option img {
+                width: 40vw;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Question 01/02: How would you respond?</div>
+        <p>Please choose an option below:</p>
+        <div class="options">
+            <label class="option">
+                <img src="img1.png" alt="Option 1">
+                <input type="radio" name="response" onclick="enableSubmit()">
+            </label>
+            <label class="option">
+                <img src="img2.jpg" alt="Option 2">
+                <input type="radio" name="response" onclick="enableSubmit()">
+            </label>
+            <label class="option">
+                <img src="img3.jpg" alt="Option 3">
+                <input type="radio" name="response" onclick="enableSubmit()">
+            </label>
+            <label class="option">
+                <img src="img4.jpg" alt="Option 4">
+                <input type="radio" name="response" onclick="enableSubmit()">
+            </label>
+        </div>
+        <button class="submit-btn" id="submitBtn" disabled>Submit</button>
+    </div>
+
+    <script>
+        function enableSubmit() {
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = false;
+            submitBtn.classList.add('active');
+        }
+    </script>
+</body>
+</html>
