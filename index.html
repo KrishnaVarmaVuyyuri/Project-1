@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question with Image Options</title>
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -12,7 +11,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Question Section */
+
         .question-container {
             display: flex;
             align-items:baseline;
@@ -44,7 +43,7 @@
             margin-left: 15px;
         }
 
-        /* Instruction Section */
+
         .instruction-text {
             
             max-width: 900px;
@@ -57,7 +56,7 @@
             
         }
 
-        /* Grid Layout for Image Options */
+
         .grid-options {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -90,7 +89,7 @@
             margin-top: 10px;
         }
 
-        /* Submit Button */
+ 
         .submit-btn {
             text-align: center;
             margin: 20px 0;
@@ -108,9 +107,7 @@
         }
 
        
-        /* ------------------ MEDIA QUERIES ------------------ */
 
-        /* Tablet View (Medium Screens) - Question in One Line */
         @media (max-width: 900px) {
             .question-label {
                 flex-direction: row;
@@ -120,7 +117,7 @@
             }
         }
 
-        /* Mobile View (Small Screens) - Question Left, 01/02 Right */
+  
         @media (max-width: 768px) {
             .question-container {
                 flex-direction: column;
@@ -138,11 +135,11 @@
             }
 
             .grid-options {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
-        /* Extra Small Mobile View (Single Column Grid) */
+ 
         @media (max-width: 480px) {
             .grid-options {
                 grid-template-columns: 1fr;
@@ -166,7 +163,7 @@
 </head>
 <body>
     <div class="container my-5">
-        <!-- Question Section -->
+        
         <div class="question-container">
             <div class="question-label">
                 <span>Question</span>
@@ -178,12 +175,11 @@
             </div>
         </div>
 
-        <!-- Instruction Section (Moved Below the Question Section) -->
         <div class="instruction-text">
         <i>Below are three options on how to respond to the scenario above, Please choose the response that resonates most with you and click <strong>Next</strong> to proceed  </i>  
         </div>
 
-        <!-- Grid Image Options -->
+
         <div class="grid-options">
             <div class="grid-option">
                 <img src="img1.png" alt="Option 1" class="img-fluid">
@@ -203,13 +199,12 @@
             </div>
         </div>
 
-        <!-- Submit Button -->
         <div class="submit-btn">
             <button>Submit</button>
         </div>
     </div>
 
-    <!-- Bootstrap JS (Optional) -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
